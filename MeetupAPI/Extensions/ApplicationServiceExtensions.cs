@@ -1,6 +1,8 @@
 ﻿using MeetupAPI.Data;
 using MeetupAPI.Helpers;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MeetupAPI.Extensions;
 
