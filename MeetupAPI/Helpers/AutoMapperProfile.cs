@@ -10,5 +10,7 @@ public class AutoMapperProfile : Profile
     {
         CreateMap<Meetup, MeetupDTO>();
         CreateMap<MeetupDTO, Meetup>();
+
+        CreateMap<User, MemberDto>();
     }
 }

@@ -1,5 +1,7 @@
 ﻿using MeetupAPI.Data;
 using MeetupAPI.Helpers;
+using MeetupAPI.Interfaces;
+using MeetupAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,7 @@ public static class ApplicationServiceExtensions
             options.UseSqlite(connectionString);
         });
         services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+        services.AddScoped<ITokenService, TokenService>();
         return services;
     }
 }
